@@ -8,9 +8,10 @@ import ProductCardList from './containers/ProductCardList'
 function App() {
   return (
     <BrowserRouter>
+    <Header/>
     <Routes>
-     <Route path="/" exact element={<Header/>}/>
-     <Route path="/list" exact element={<ProductCardList/>}/>
+     {/* <Route path="/" exact element={<Header/>}/> */}
+     <Route path="/" exact element={<ProductCardList/>}/>
     </Routes>
   </BrowserRouter>
   );
