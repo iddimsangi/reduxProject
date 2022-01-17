@@ -1,13 +1,18 @@
-
-
-
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Header from './containers/Header'
+import ProductCardList from './containers/ProductCardList'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-    <h1>helloworld</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+     <Route path="/" exact element={<Header/>}/>
+     <Route path="/list" exact element={<ProductCardList/>}/>
+    </Routes>
+  </BrowserRouter>
   );
 }
 
