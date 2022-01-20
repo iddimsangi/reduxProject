@@ -1,24 +1,26 @@
 import React from "react";
-import { useParams } from 'react-router-dom'
+import { useParams, useLocation} from 'react-router-dom'
 const CardProfile = () => {
-    const param = useParams()
-    console.log(param)
+    // const param = useParams()
+    const location = useLocation()
+    console.log(location)
+    const{category, description, image, price} = location.state
   return (
     <div style={{width:'80%', margin:'25px auto'}}>
-      <div className="ui card" style={{width:'100%', height:'60vh'}}>
+      <div className="ui card" style={{width:'60%', height:'70vh'}}>
         <div className="ui slide masked reveal image">
-          <img src="/images/avatar/large/jenny.jpg" className="visible content" />
+          <img src={image} style={{height:'70%', width:'100%'}} className=" content" />
           {/* <img src="/images/avatar/large/elliot.jpg" className="hidden content" /> */}
         </div>
         <div className="content">
-          <a className="header">Team Fu &amp; Hess</a>
+          <a className="header">{category}</a>
           <div className="meta">
-            <span className="date">Create in Sep 2014</span>
+            <span className="date">{description}</span>
           </div>
         </div>
         <div className="extra content">
           <a>
-            <i className="users icon"></i>2 Members
+            PRICE ${price}
           </a>
         </div>
       </div>

@@ -12,7 +12,7 @@ function App() {
     <Header/>
     <Routes>
      <Route path="/" exact element={<ProductCardList/>}/>
-       <Route path="/profile" exact element={<CardProfile/>}/>
+       <Route path="/profile/:id" exact element={<CardProfile/>}/>
     </Routes>
   </BrowserRouter>
   );

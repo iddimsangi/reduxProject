@@ -5,7 +5,7 @@ export const setProduct = (products) =>{
         payload: products
     }
 }
-export const selectedProduct = (product) =>{
+export const selectedProduct = (product) => {
     return{
         type: actionTypes.SELECTED_PRODUCT,
         payload: product
